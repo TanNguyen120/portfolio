@@ -1,5 +1,7 @@
 import HeadTile from '@/component/headTile';
+import ProjectCard from '@/component/projectCard';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -66,26 +68,20 @@ export default function Home() {
       {/* ============================================================================================================================================================================== */}
       <div className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'>
         <HeadTile tile='Projects' />
-        <div className=' w-3/4 bg-slate-700 p-5 shadow-sm shadow-slate-300 grid grid-cols-3'>
-          <div className=' rounded-full w-1/5 h-1/5 m-6'>
-            <div>
-              <img
-                src='https://assets.entrepreneur.com/content/3x2/2000/20191009140007-GettyImages-1053962188.jpeg'
-                alt='project poster'
-              />
-            </div>
-          </div>
-          <div className=' col-span-2 flex flex-col items-center'>
-            <div>THE GREATEST PROJECTER</div>
-            <div>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptatum vel officiis architecto. Perspiciatis molestiae
-              assumenda adipisci? Quidem, laudantium esse! Nihil ad labore
-              debitis incidunt ea doloribus tempore vitae laboriosam voluptates?
-            </div>
-            <div>To Project</div>
-          </div>
-        </div>
+        <ProjectCard
+          projectName='ShinShen'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.'
+          projectLink='https://ryanfitzgerald.github.io/devportfolio/'
+          imgUrl='https://lts.com.vn/wp-content/uploads/2021/01/joint-stock-company-2.jpg'
+        />
+        {/* ============================================================================================================================================================================== */}
+
+        <ProjectCard
+          imgUrl='https://cdn-scripbox-wordpress.scripbox.com/wp-content/uploads/2021/09/us-stock-market-timings-vector.png'
+          projectLink='https://tailwindcss.com/docs/box-shadow'
+          projectName='inter Dana'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.'
+        />
       </div>
     </main>
   );
