@@ -1,7 +1,5 @@
 import HeadTile from '@/component/headTile';
 import ProjectCard from '@/component/projectCard';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -82,6 +80,10 @@ export default function Home() {
           projectName='inter Dana'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.'
         />
+      </div>
+      <div className='  min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400 flex items-center justify-center'>
+        <HeadTile tile='Skills' />
+        <div className=' flex flex-row w-3/5 p-4 m-4 '></div>
       </div>
     </main>
   );
