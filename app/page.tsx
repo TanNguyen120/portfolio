@@ -1,7 +1,9 @@
 import HeadTile from '@/component/headTile';
 import ProjectCard from '@/component/projectCard';
+import SkillBtn from '@/component/skillBtn';
 
 export default function Home() {
+  const skillList = ['javaScript', 'c++', 'c#', 'python', 'php'];
   return (
     <main className='flex min-h-screen flex-col items-center justify-between  bg-slate-200'>
       <div className=' grid grid-cols-1 bg-violetSpace bg-cover w-screen '>
@@ -81,9 +83,13 @@ export default function Home() {
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.'
         />
       </div>
-      <div className='  min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400 flex items-center justify-center'>
+      <div className=' flex flex-col min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400  items-center justify-center'>
         <HeadTile tile='Skills' />
-        <div className=' flex flex-row w-3/5 p-4 m-4 '></div>
+        <div className=' flex flex-row w-3/5 p-4 m-4 gap-4'>
+          {skillList.map((e, i) => (
+            <SkillBtn key={i} skillName={e} />
+          ))}
+        </div>
       </div>
     </main>
   );
