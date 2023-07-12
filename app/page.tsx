@@ -1,9 +1,28 @@
-import HeadTile from '@/component/headTile';
-import ProjectCard from '@/component/projectCard';
-import SkillBtn from '@/component/skillBtn';
+import HeadTile from '@/app/component/headTile';
+import ProjectCard from '@/app/component/projectCard';
+import SkillBtn from '@/app/component/skillBtn';
 
 export default function Home() {
-  const skillList = ['javaScript', 'c++', 'c#', 'python', 'php'];
+  const skillList = [
+    'javaScript',
+    'c++',
+    'c#',
+    'python',
+    'php',
+    'java',
+    'react',
+    'unity',
+    'phaser',
+    'nextjs',
+    'nestjs',
+    'node',
+    'expressjs',
+    'tailwind',
+    'jquery',
+    'sqlSever',
+    'mySql',
+    'MongoDB',
+  ];
   return (
     <main className='flex min-h-screen flex-col items-center justify-between  bg-slate-200'>
       <div className=' grid grid-cols-1 bg-violetSpace bg-cover w-screen '>
@@ -74,8 +93,7 @@ export default function Home() {
           projectLink='https://ryanfitzgerald.github.io/devportfolio/'
           imgUrl='https://lts.com.vn/wp-content/uploads/2021/01/joint-stock-company-2.jpg'
         />
-        {/* ============================================================================================================================================================================== */}
-
+        {/* --------------------------------------------------------------------------- */}
         <ProjectCard
           imgUrl='https://cdn-scripbox-wordpress.scripbox.com/wp-content/uploads/2021/09/us-stock-market-timings-vector.png'
           projectLink='https://tailwindcss.com/docs/box-shadow'
@@ -83,12 +101,23 @@ export default function Home() {
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.'
         />
       </div>
-      <div className=' flex flex-col min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400  items-center justify-center'>
+      {/* ============================================================================================================================================================================== */}
+      <div className=' flex flex-col min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400  items-center'>
         <HeadTile tile='Skills' />
-        <div className=' flex flex-row w-3/5 p-4 m-4 gap-4'>
+        <div className=' flex flex-row py-5 gap-4 m-auto items-center w-1/2 flex-wrap'>
           {skillList.map((e, i) => (
             <SkillBtn key={i} skillName={e} />
           ))}
+        </div>
+      </div>
+      {/* ============================================================================================================================================================================== */}
+      <div className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'>
+        <HeadTile tile='Contact Me' />
+        <div className=' flex flex-col w-1/2 items-center mx-auto my-3'>
+          <div className=' flex flex-row text-white text-lg'>
+            <div className=' mr-4'>Email:</div>
+            <div>tannguyen1220@gmail.com</div>
+          </div>
         </div>
       </div>
     </main>
