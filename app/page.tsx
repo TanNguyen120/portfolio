@@ -3,6 +3,7 @@ import ProjectCard from '@/app/component/projectCard';
 import SkillBtn from '@/app/component/skillBtn';
 import Link from 'next/link';
 import { MdOutlineAlternateEmail } from 'react-icons/md';
+import { AiFillLinkedin } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
 import projects from '@/project.json';
 
@@ -142,7 +143,9 @@ export default function Home() {
             </Link>
           </div>
           <div className=' flex flex-row text-white text-lg '>
-            <div className=' mr-4 text-slate-300'>Linkdein:</div>
+            <div className=' mr-4 text-slate-300'>
+              Linkdein <AiFillLinkedin className='inline' />:
+            </div>
             <Link
               className=' hover:text-blue-300'
               href={
