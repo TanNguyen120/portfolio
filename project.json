@@ -1,0 +1,10 @@
+{
+  "projects": [
+    {
+      "projectName": "T-pokedex",
+      "description": "Complex Website that have all pokemon game relate data. Write with react framework",
+      "projectLink": "https://github.com/TanNguyen120/t-pokedex",
+      "imgUrl": "/projectsPic/t-pokedex.png"
+    }
+  ]
+}

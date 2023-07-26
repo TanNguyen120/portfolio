@@ -1,6 +1,10 @@
 import HeadTile from '@/app/component/headTile';
 import ProjectCard from '@/app/component/projectCard';
 import SkillBtn from '@/app/component/skillBtn';
+import Link from 'next/link';
+import { MdOutlineAlternateEmail } from 'react-icons/md';
+import { BsGithub } from 'react-icons/bs';
+import projects from '@/project.json';
 
 export default function Home() {
   const skillList = [
@@ -20,8 +24,16 @@ export default function Home() {
     'tailwind',
     'jquery',
     'sqlSever',
+    'Database Design',
     'mySql',
     'MongoDB',
+    'numpy',
+    'Tablelau',
+    'Git',
+    'GitHub',
+    'Phaser 3',
+    'Post Man',
+    'Ajax',
   ];
   return (
     <main className='flex min-h-screen flex-col items-center justify-between  bg-slate-200'>
@@ -45,10 +57,12 @@ export default function Home() {
         <div className='flex flex-row w-1/2 items-center gap-24'>
           <HeadTile tile='About Me' />
           <div className=' text-white'>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, dicta
-            odio. Nisi dicta ratione aspernatur ex distinctio quod
-            exercitationem eum ea hic porro minus voluptatem, facilis harum
-            neque architecto assumenda.
+            With Bachelor Degree in Computer Science, I have intermediate
+            knowledge in math for computer (Discrete Mathematics, Number Theory,
+            Graph Theory) and programming technic as well as data structure and
+            algorithms. In my final year of college I also do project that
+            involve full stack Software with modern framework, data base design
+            and analysis ( see projects below)
           </div>
         </div>
       </div>
@@ -87,19 +101,15 @@ export default function Home() {
       {/* ============================================================================================================================================================================== */}
       <div className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'>
         <HeadTile tile='Projects' />
-        <ProjectCard
-          projectName='ShinShen'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.'
-          projectLink='https://ryanfitzgerald.github.io/devportfolio/'
-          imgUrl='https://lts.com.vn/wp-content/uploads/2021/01/joint-stock-company-2.jpg'
-        />
-        {/* --------------------------------------------------------------------------- */}
-        <ProjectCard
-          imgUrl='https://cdn-scripbox-wordpress.scripbox.com/wp-content/uploads/2021/09/us-stock-market-timings-vector.png'
-          projectLink='https://tailwindcss.com/docs/box-shadow'
-          projectName='inter Dana'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.'
-        />
+        {projects.projects.map((e: any, i: number) => (
+          <ProjectCard
+            key={i}
+            projectName={e.projectName}
+            description={e.description}
+            projectLink={e.projectLink}
+            imgUrl={e.imgUrl}
+          />
+        ))}
       </div>
       {/* ============================================================================================================================================================================== */}
       <div className=' flex flex-col min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400  items-center'>
@@ -113,12 +123,40 @@ export default function Home() {
       {/* ============================================================================================================================================================================== */}
       <div className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'>
         <HeadTile tile='Contact Me' />
-        <div className=' flex flex-col w-1/2 items-center mx-auto my-3'>
+        <div className=' flex flex-col w-1/2 mx-auto my-3 pl-12 gap-5'>
           <div className=' flex flex-row text-white text-lg'>
-            <div className=' mr-4'>Email:</div>
+            <div className=' mr-4 text-slate-300'>
+              Email <MdOutlineAlternateEmail className='inline' />:
+            </div>
             <div>tannguyen1220@gmail.com</div>
           </div>
+          <div className=' flex flex-row text-white text-lg'>
+            <div className=' mr-4 text-slate-300'>
+              GitHub <BsGithub className='inline' /> :
+            </div>
+            <Link
+              className='hover:text-blue-300'
+              href={'https://github.com/TanNguyen120/'}
+            >
+              https://github.com/TanNguyen120/
+            </Link>
+          </div>
+          <div className=' flex flex-row text-white text-lg '>
+            <div className=' mr-4 text-slate-300'>Linkdein:</div>
+            <Link
+              className=' hover:text-blue-300'
+              href={
+                ' https://www.linkedin.com/in/t%C3%A2n-nguy%E1%BB%85n-vi%E1%BB%87t-89852b266/'
+              }
+            >
+              https://www.linkedin.com/Tan Nguyen
+            </Link>
+          </div>
         </div>
+      </div>
+      {/* ============================================================================================================================================================================== */}
+      <div className='flex flex-col min-w-full bg-black text-slate-200 p-24 shadow-md shadow-slate-400  items-center'>
+        Copyright © {new Date().getFullYear()} Nguyen Viet Tan
       </div>
     </main>
   );
