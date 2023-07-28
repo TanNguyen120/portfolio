@@ -6,6 +6,8 @@ import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
 import projects from '@/project.json';
+import NavBar from './component/navBar';
+import Image from 'next/image';
 
 export default function Home() {
   const skillList = [
@@ -21,6 +23,7 @@ export default function Home() {
     'nextjs',
     'nestjs',
     'node',
+    'react-native',
     'expressjs',
     'tailwind',
     'jquery',
@@ -39,7 +42,8 @@ export default function Home() {
   return (
     <main className='flex min-h-screen flex-col items-center justify-between  bg-slate-200'>
       <div className=' grid grid-cols-1 bg-violetSpace bg-cover w-screen '>
-        <div className=' min-h-screen flex flex-col p-12 items-center bg-slate-800 bg-opacity-75'>
+        <div className=' min-h-screen flex flex-col px-12 items-center bg-slate-800 bg-opacity-75'>
+          <NavBar />
           <div className=' text-white font-semibold text-6xl '>
             Nguyễn Việt Tân
           </div>
@@ -47,14 +51,20 @@ export default function Home() {
             Software Engineer
           </div>
           <div className=' rounded-full w-1/5 h-1/5 m-6'>
-            <img
-              src='https://cdn.icon-icons.com/icons2/1919/PNG/512/avatarinsideacircle_122011.png'
+            <Image
+              src={'/avatar.jpg'}
               alt='avatar'
+              width={1200}
+              height={1200}
+              className=' rounded-full'
             />
           </div>
         </div>
       </div>
-      <div className=' flex justify-center min-w-full bg-slate-800 p-44 shadow-md shadow-slate-50'>
+      <div
+        className=' flex justify-center min-w-full bg-slate-800 p-44 shadow-md shadow-slate-50'
+        id='aboutMe'
+      >
         <div className='flex flex-row w-1/2 items-center gap-24'>
           <HeadTile tile='About Me' />
           <div className=' text-white'>
@@ -100,7 +110,10 @@ export default function Home() {
         </div>
       </div>
       {/* ============================================================================================================================================================================== */}
-      <div className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'>
+      <div
+        className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'
+        id='projects'
+      >
         <HeadTile tile='Projects' />
         {projects.projects.map((e: any, i: number) => (
           <ProjectCard
@@ -113,7 +126,10 @@ export default function Home() {
         ))}
       </div>
       {/* ============================================================================================================================================================================== */}
-      <div className=' flex flex-col min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400  items-center'>
+      <div
+        className=' flex flex-col min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400  items-center'
+        id='skills'
+      >
         <HeadTile tile='Skills' />
         <div className=' flex flex-row py-5 gap-4 m-auto items-center w-1/2 flex-wrap'>
           {skillList.map((e, i) => (
@@ -122,7 +138,10 @@ export default function Home() {
         </div>
       </div>
       {/* ============================================================================================================================================================================== */}
-      <div className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'>
+      <div
+        className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'
+        id='contact'
+      >
         <HeadTile tile='Contact Me' />
         <div className=' flex flex-col w-1/2 mx-auto my-3 pl-12 gap-5'>
           <div className=' flex flex-row text-white text-lg'>
