@@ -23,6 +23,12 @@
       "description": "React native project that crawl data from a website and display nicely in phone screen plus a notif if your region get electric shutdown",
       "projectLink": "https://github.com/TanNguyen120/lich-cat-dien",
       "imgUrl": "/projectsPic/stock-project.jpg"
+    },
+    {
+      "projectName": "PHP web sever",
+      "description": "A web sever write in PHP and connect to mysql data base via native library",
+      "projectLink": "https://github.com/UDPT-MARKET",
+      "imgUrl": "/projectsPic/stock-project.jpg"
     }
   ]
 }
