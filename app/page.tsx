@@ -52,11 +52,11 @@ export default function Home() {
           </div>
           <div className=' rounded-full w-1/5 h-1/5 m-6'>
             <Image
-              src={'/avatar.jpg'}
+              src={'/portrait.jpg'}
               alt='avatar'
-              width={1200}
-              height={1200}
-              className=' rounded-full'
+              width={900}
+              height={900}
+              className=' rounded-lg hover:scale-125 cursor-crosshair'
             />
           </div>
         </div>
@@ -105,6 +105,15 @@ export default function Home() {
               nghệ và ứng dụng. Là một trong những thành viên của Đại học Quốc
               gia Thành phố Hồ Chí Minh, được xếp vào nhóm trường đại học trọng
               điểm quốc gia Việt Nam. (Source: wikipedia)
+            </div>
+            <div className=' p-2 border border-slate-400 '>
+              <Image
+                src={'/portrait.jpg'}
+                alt='DegreePic'
+                width={1200}
+                height={1200}
+                className=' rounded-lg'
+              />
             </div>
           </div>
         </div>
