@@ -2,9 +2,33 @@
   "projects": [
     {
       "projectName": "T-pokedex",
-      "description": "Complex Website that have all pokemon game relate data. Write with react framework",
+      "description": "Complex Website that have all pokemon game relate data. Write with react framework and styling with Tailswind Css. Lot of advance library was use like react router and redux",
       "projectLink": "https://github.com/TanNguyen120/t-pokedex",
       "imgUrl": "/projectsPic/t-pokedex.png"
+    },
+    {
+      "projectName": "Endless Tower",
+      "description": "A rougelike game writen in C# language. Develope with unity engine",
+      "projectLink": "https://github.com/TanNguyen120/unity-rougelike-game",
+      "imgUrl": "/projectsPic/endlessTower.png"
+    },
+    {
+      "projectName": "Backend E commerce Website",
+      "description": "The back end of an toy store. Use NodeJS with express framework and use mysql for database. This project has some advance library for use like passport for token base auth, cookie reader for auto login, and file(img) uploading",
+      "projectLink": "https://github.com/TanNguyen120/BeamSaber-Store",
+      "imgUrl": "/projectsPic/beamSaber.png"
+    },
+    {
+      "projectName": "Lich Cat Dien",
+      "description": "React native project that crawl data from a website and display nicely in phone screen plus a notif if your region get electric shutdown",
+      "projectLink": "https://github.com/TanNguyen120/lich-cat-dien",
+      "imgUrl": "/projectsPic/lcd.jpg"
+    },
+    {
+      "projectName": "PHP web sever",
+      "description": "A web sever write in PHP and connect to mysql data base via native library",
+      "projectLink": "https://github.com/UDPT-MARKET",
+      "imgUrl": "/projectsPic/stock-project.jpg"
     }
   ]
 }

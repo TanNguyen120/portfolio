@@ -16,7 +16,9 @@ export default function ProjectCard({
       <img src={imgUrl} alt='project poster' className=' w-max h-max' />
 
       <div className=' col-span-2 flex flex-col items-center m-5'>
-        <div className=' text-white'>{projectName}</div>
+        <div className=' text-white text-lg m-4 font-semibold'>
+          {projectName}
+        </div>
         <div className=' text-slate-400 m-5'>{description}</div>
         <Link
           target='_blank'
