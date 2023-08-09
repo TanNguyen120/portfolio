@@ -16,7 +16,7 @@ export default function NavBar() {
     });
   };
   return (
-    <div className=' grid grid-cols-4 bg-neutral-800 text-neutral-300 rounded-b-lg w-1/3 mx-auto px-3 py-2 mb-6'>
+    <div className=' grid grid-cols-5 bg-neutral-800 text-neutral-300 rounded-b-lg w-1/3 mx-auto px-3 py-2 mb-6'>
       {/* <Link
         className=' hover:bg-slate-600 rounded-lg px-2 py-4 text-center'
         href='#aboutMe'
@@ -26,6 +26,7 @@ export default function NavBar() {
       </Link> */}
       {[
         ['About Me', '#aboutMe'],
+        ['Education', '#education'],
         ['Projects', '#projects'],
         ['Skills', '#skills'],
         ['Contact', '#contact'],

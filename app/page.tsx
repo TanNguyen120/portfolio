@@ -79,7 +79,10 @@ export default function Home() {
       </div>
       {/* ============================================================================================================================================================================== */}
       <div className='  min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400 flex items-center justify-center'>
-        <div className='flex flex-col w-1/2 gap-24 justify-center items-center '>
+        <div
+          className='flex flex-col w-1/2 gap-24 justify-center items-center '
+          id='education'
+        >
           <HeadTile tile='Education' />
           <div className=' flex flex-col border border-slate-500 p-10 '>
             <div className=' flex flex-row '>
@@ -106,15 +109,15 @@ export default function Home() {
               gia Thành phố Hồ Chí Minh, được xếp vào nhóm trường đại học trọng
               điểm quốc gia Việt Nam. (Source: wikipedia)
             </div>
-            <div className=' p-2 border border-slate-400 '>
-              <Image
-                src={'/portrait.jpg'}
-                alt='DegreePic'
-                width={1200}
-                height={1200}
-                className=' rounded-lg'
-              />
-            </div>
+          </div>
+          <div className='hover:scale-150 cursor-crosshair'>
+            <Image
+              src={'/btn.jpg'}
+              alt='DegreePic'
+              width={1200}
+              height={1200}
+              className=' rounded-lg -rotate-90 object-cover w-full h-1/2'
+            />
           </div>
         </div>
       </div>
