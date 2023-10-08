@@ -134,6 +134,7 @@ export default function Home() {
             description={e.description}
             projectLink={e.projectLink}
             imgUrl={e.imgUrl}
+            websiteLink={e.webSiteLink}
           />
         ))}
       </div>
