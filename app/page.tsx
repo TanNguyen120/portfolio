@@ -8,6 +8,7 @@ import { BsGithub } from 'react-icons/bs';
 import projects from '@/project.json';
 import NavBar from './component/navBar';
 import Image from 'next/image';
+import ScrollProgressBar from './component/scrollProgress';
 
 export default function Home() {
   const skillList = [
@@ -43,6 +44,7 @@ export default function Home() {
     <main className='flex min-h-screen flex-col items-center justify-between  bg-slate-200'>
       <div className=' grid grid-cols-1 bg-violetSpace bg-cover w-screen '>
         <div className=' min-h-screen flex flex-col px-12 items-center bg-slate-800 bg-opacity-75'>
+          <ScrollProgressBar />
           <NavBar />
           <div className=' text-white font-semibold text-6xl '>
             Nguyễn Việt Tân

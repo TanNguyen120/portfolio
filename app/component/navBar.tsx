@@ -30,6 +30,7 @@ export default function NavBar() {
         ['Projects', '#projects'],
         ['Skills', '#skills'],
         ['Contact', '#contact'],
+        // ['animationTest', '/animationTest'],
       ].map(([title, url]) => (
         <Link
           href={url}
@@ -40,6 +41,12 @@ export default function NavBar() {
           {title}
         </Link>
       ))}
+      <Link
+        href={'/animationTest'}
+        className='hover:bg-slate-600 rounded-lg px-2 py-4 text-center hover:text-white font-bold text-lg'
+      >
+        animationTest
+      </Link>
     </div>
   );
 }
