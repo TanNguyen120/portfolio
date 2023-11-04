@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function NavBar() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -32,21 +33,28 @@ export default function NavBar() {
         ['Contact', '#contact'],
         // ['animationTest', '/animationTest'],
       ].map(([title, url]) => (
-        <Link
-          href={url}
-          className='hover:bg-slate-600 rounded-lg px-2 py-4 text-center hover:text-white font-bold text-lg'
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.3 }}
           key={title}
-          onClick={handleScroll}
         >
-          {title}
-        </Link>
+          <Link
+            href={url}
+            className='hover:bg-slate-600 rounded-lg px-2 py-4 text-center hover:text-white font-bold text-lg'
+            key={title}
+            onClick={handleScroll}
+          >
+            {title}
+          </Link>
+        </motion.div>
       ))}
-      <Link
+      {/* <Link
         href={'/animationTest'}
         className='hover:bg-slate-600 rounded-lg px-2 py-4 text-center hover:text-white font-bold text-lg'
       >
         animationTest
-      </Link>
+      </Link> */}
     </div>
   );
 }
