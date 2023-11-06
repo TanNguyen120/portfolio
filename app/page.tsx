@@ -68,12 +68,13 @@ export default function Home() {
         <div className='flex flex-row w-1/2 items-center gap-24'>
           <HeadTile tile='About Me' />
           <div className=' text-white'>
-            With Bachelor Degree in Computer Science, I have intermediate
-            knowledge in math for computer (Discrete Mathematics, Number Theory,
-            Graph Theory) and programming technic as well as data structure and
-            algorithms. In my final year of college I also do project that
-            involve full stack Software with modern framework, data base design
-            and analysis ( see projects below)
+            With a Bachelor`&apos;`s Degree in Computer Science, I have
+            intermediate knowledge in math for computers (Discrete Mathematics,
+            Number Theory, Graph Theory) and programming techniques, as well as
+            data structures and algorithms. I have strong experience with small
+            to mid-size web applications, both in frontend and backend
+            development. Additionally, I have worked on indie game projects
+            using various engines.
           </div>
         </div>
       </div>
