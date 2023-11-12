@@ -4,11 +4,19 @@
       "projectName": "T-pokedex",
       "description": "Complex Website that have all pokemon game relate data. Write with react framework and styling with Tailswind Css. Lot of advance library was use like react router and redux",
       "projectLink": "https://github.com/TanNguyen120/t-pokedex",
-      "imgUrl": "/projectsPic/t-pokedex.png"
+      "imgUrl": "/projectsPic/t-pokedex.png",
+      "webSiteLink": "https://tannguyen120.github.io/t-pokedex/"
+    },
+    {
+      "projectName": "T-Gamelog",
+      "description": "Website to logging my played games. Using postgrest db from vercel to store data",
+      "projectLink": "https://github.com/TanNguyen120/Gamer-Log",
+      "imgUrl": "/projectsPic/t-gameLog.png",
+      "webSiteLink": "https://t-gamelog.vercel.app/"
     },
     {
       "projectName": "Endless Tower",
-      "description": "A rougelike game writen in C# language. Develope with unity engine",
+      "description": "A rougelike game written in C# language. Develope with unity engine",
       "projectLink": "https://github.com/TanNguyen120/unity-rougelike-game",
       "imgUrl": "/projectsPic/endlessTower.png"
     },
@@ -20,7 +28,7 @@
     },
     {
       "projectName": "Lich Cat Dien",
-      "description": "React native project that crawl data from a website and display nicely in phone screen plus a notif if your region get electric shutdown",
+      "description": "React native project that crawl data from a website and display nicely in phone screen plus a notification if your region get electric shutdown",
       "projectLink": "https://github.com/TanNguyen120/lich-cat-dien",
       "imgUrl": "/projectsPic/lcd.jpg"
     },

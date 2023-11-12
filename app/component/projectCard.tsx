@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ProjectCard({
@@ -5,16 +6,17 @@ export default function ProjectCard({
   description,
   projectLink,
   projectName,
+  websiteLink,
 }: {
   imgUrl: string;
   description: string;
   projectLink: string;
   projectName: string;
+  websiteLink: any;
 }) {
   return (
     <div className=' w-3/5 bg-slate-700 shadow-sm shadow-slate-300 grid grid-cols-3 '>
-      <img src={imgUrl} alt='project poster' className=' w-max h-max' />
-
+      <Image height={920} width={1280} src={imgUrl} alt='project poster' />
       <div className=' col-span-2 flex flex-col items-center m-5'>
         <div className=' text-white text-lg m-4 font-semibold'>
           {projectName}
@@ -26,6 +28,17 @@ export default function ProjectCard({
           className=' text-slate-300 hover:text-slate-500 hover:underline mt-auto'
         >
           To Project
+        </Link>
+        {/* Some project is not a web */}
+        <Link
+          href={websiteLink ? websiteLink : ''}
+          className={
+            websiteLink ? ' text-slate-300 hover:underline mt-2' : 'hidden'
+          }
+          title={websiteLink}
+          target='blank'
+        >
+          To Web Site
         </Link>
       </div>
     </div>
