@@ -62,20 +62,11 @@ export default function Home() {
       >
         <div className='flex flex-row w-1/2 items-center gap-24'>
           <HeadTile tile='About Me' />
-          <div className='flex flex-col'>
-            <div className=' text-white'>
-              VNUHCM-US was re-founded in March 1996 following a split from Đại
-              học Tổng hợp (lit. translation: Ho Chi Minh City University). The
-              school has since been a member university of Vietnam National
-              University, Ho Chi Minh City.
-            </div>
-            <div className=' mt-5 text-white'>
-              The two joint bachelor programs include Bachelor of Computer &
-              Information Sciences with a major in IT Service Science
-              collaborated with Auckland University of Technology, New Zealand;
-              Bachelor of Science in Management collaborated with a major in
-              International Business collaborated with Keuka College, USA[1]
-            </div>
+          <div className='text-white text-left w-1/2 ml-5 mr-auto'>
+            With Bachelor Degree in Information Technology, I have intermediate
+            knowledge in math for computer (Discrete Mathematics, Number Theory,
+            Graph Theory). Strong knowledge in DataStructure and Algorithm,
+            Devops, Dynamic Programming.
           </div>
         </div>
       </div>
@@ -100,16 +91,21 @@ export default function Home() {
                 Sept 2016 - Sept 2022
               </div>
             </div>
-            <div className=' my-5 text-slate-300'>
-              Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ
-              Chí Minh (University of Science, Viet Nam National University Ho
-              Chi Minh City” hoặc “Viet Nam National University Ho Chi Minh City
-              - University of Science” hoặc “VNUHCM-University of Science”, viết
-              tắt là “VNUHCM-US” hoặc “HCMUS”) là trường đại học đầu ngành của
-              Việt Nam về đào tạo, nghiên cứu khoa học cơ bản, khoa học công
-              nghệ và ứng dụng. Là một trong những thành viên của Đại học Quốc
-              gia Thành phố Hồ Chí Minh, được xếp vào nhóm trường đại học trọng
-              điểm quốc gia Việt Nam. (Source: wikipedia)
+            <div className='flex flex-col'>
+              <div className=' text-white'>
+                VNUHCM-US was re-founded in March 1996 following a split from
+                Đại học Tổng hợp (lit. translation: Ho Chi Minh City
+                University). The school has since been a member university of
+                Vietnam National University, Ho Chi Minh City.
+              </div>
+              <div className=' mt-5 text-white'>
+                The two joint bachelor programs include Bachelor of Computer &
+                Information Sciences with a major in IT Service Science
+                collaborated with Auckland University of Technology, New
+                Zealand; Bachelor of Science in Management collaborated with a
+                major in International Business collaborated with Keuka College,
+                USA[1]
+              </div>
             </div>
           </div>
           <div className='hover:scale-150 cursor-crosshair'>
