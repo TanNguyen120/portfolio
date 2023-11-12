@@ -62,6 +62,7 @@ export default function Home() {
       >
         <div className='flex flex-row w-1/2 items-center gap-24'>
           <HeadTile tile='About Me' />
+
           <div className='flex flex-col'>
             <div className=' text-white'>
               VNUHCM-US was re-founded in March 1996 following a split from Đại
@@ -76,54 +77,19 @@ export default function Home() {
               Bachelor of Science in Management collaborated with a major in
               International Business collaborated with Keuka College, USA[1]
             </div>
+
+          <div className=' text-white'>
+            With a Bachelor`&apos;`s Degree in Computer Science, I have
+            intermediate knowledge in math for computers (Discrete Mathematics,
+            Number Theory, Graph Theory) and programming techniques, as well as
+            data structures and algorithms. I have strong experience with small
+            to mid-size web applications, both in frontend and backend
+            development. Additionally, I have worked on indie game projects
+            using various engines.
           </div>
         </div>
       </div>
-      {/* ============================================================================================================================================================================== */}
-      <div className='  min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400 flex items-center justify-center'>
-        <div
-          className='flex flex-col w-1/2 gap-24 justify-center items-center '
-          id='education'
-        >
-          <HeadTile tile='Education' />
-          <div className=' flex flex-col border border-slate-500 p-10 '>
-            <div className=' flex flex-row '>
-              <div className=' flex flex-col'>
-                <div className=' text-slate-200 text-xl'>
-                  VNUHCM University of Science{' '}
-                </div>
-                <div className=' text-slate-400'>
-                  Bachelor of Science in Information Technology
-                </div>
-              </div>
-              <div className=' text-slate-200 float-right ml-auto'>
-                Sept 2016 - Sept 2022
-              </div>
-            </div>
-            <div className=' my-5 text-slate-300'>
-              Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ
-              Chí Minh (University of Science, Viet Nam National University Ho
-              Chi Minh City” hoặc “Viet Nam National University Ho Chi Minh City
-              - University of Science” hoặc “VNUHCM-University of Science”, viết
-              tắt là “VNUHCM-US” hoặc “HCMUS”) là trường đại học đầu ngành của
-              Việt Nam về đào tạo, nghiên cứu khoa học cơ bản, khoa học công
-              nghệ và ứng dụng. Là một trong những thành viên của Đại học Quốc
-              gia Thành phố Hồ Chí Minh, được xếp vào nhóm trường đại học trọng
-              điểm quốc gia Việt Nam. (Source: wikipedia)
-            </div>
-          </div>
-          <div className='hover:scale-150 cursor-crosshair'>
-            <Image
-              src={'/btn.jpg'}
-              alt='DegreePic'
-              width={1200}
-              height={1200}
-              className=' rounded-lg -rotate-90 object-cover w-full h-1/2'
-            />
-          </div>
-        </div>
-      </div>
-      {/* ============================================================================================================================================================================== */}
+     
       <div
         className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'
         id='projects'
