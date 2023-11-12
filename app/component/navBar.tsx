@@ -17,7 +17,7 @@ export default function NavBar() {
     });
   };
   return (
-    <div className=' grid grid-cols-5 bg-neutral-800 text-neutral-300 rounded-b-lg w-1/3 mx-auto px-3 py-2 mb-6'>
+    <div className=' grid grid-cols-5 bg-slate-800 text-neutral-300 rounded-b-lg w-1/3 mx-auto  py-3 mb-6'>
       {/* <Link
         className=' hover:bg-slate-600 rounded-lg px-2 py-4 text-center'
         href='#aboutMe'
@@ -30,23 +30,23 @@ export default function NavBar() {
         ['Education', '#education'],
         ['Projects', '#projects'],
         ['Skills', '#skills'],
-        ['Contact', '#contact'],
+        ['Contact Me', '#contact'],
         // ['animationTest', '/animationTest'],
       ].map(([title, url]) => (
         <motion.div
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.6 }}
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.3 }}
           key={title}
         >
-          <Link
+          <motion.a
             href={url}
-            className='hover:bg-slate-600 rounded-lg px-2 py-4 text-center hover:text-white font-bold text-lg'
+            className=' rounded-lg px-2 py-6 text-center hover:text-white font-bold text-lg'
             key={title}
             onClick={handleScroll}
           >
             {title}
-          </Link>
+          </motion.a>
         </motion.div>
       ))}
       {/* <Link

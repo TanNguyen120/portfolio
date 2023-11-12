@@ -9,6 +9,7 @@ import projects from '@/project.json';
 import NavBar from './component/navBar';
 import Image from 'next/image';
 import ScrollProgressBar from './component/scrollProgress';
+import ProfilePicture from './component/profilePicture';
 
 export default function Home() {
   const skillList = [
@@ -52,15 +53,7 @@ export default function Home() {
           <div className=' text-slate-300 font-semibold text-4xl mt-10  '>
             Software Engineer
           </div>
-          <div className=' rounded-full w-1/5 h-1/5 m-6'>
-            <Image
-              src={'/portrait.jpg'}
-              alt='avatar'
-              width={900}
-              height={900}
-              className=' rounded-lg hover:scale-125 cursor-crosshair'
-            />
-          </div>
+          <ProfilePicture />
         </div>
       </div>
       <div
@@ -69,13 +62,20 @@ export default function Home() {
       >
         <div className='flex flex-row w-1/2 items-center gap-24'>
           <HeadTile tile='About Me' />
-          <div className=' text-white'>
-            With Bachelor Degree in Computer Science, I have intermediate
-            knowledge in math for computer (Discrete Mathematics, Number Theory,
-            Graph Theory) and programming technic as well as data structure and
-            algorithms. In my final year of college I also do project that
-            involve full stack Software with modern framework, data base design
-            and analysis ( see projects below)
+          <div className='flex flex-col'>
+            <div className=' text-white'>
+              VNUHCM-US was re-founded in March 1996 following a split from Đại
+              học Tổng hợp (lit. translation: Ho Chi Minh City University). The
+              school has since been a member university of Vietnam National
+              University, Ho Chi Minh City.
+            </div>
+            <div className=' mt-5 text-white'>
+              The two joint bachelor programs include Bachelor of Computer &
+              Information Sciences with a major in IT Service Science
+              collaborated with Auckland University of Technology, New Zealand;
+              Bachelor of Science in Management collaborated with a major in
+              International Business collaborated with Keuka College, USA[1]
+            </div>
           </div>
         </div>
       </div>
