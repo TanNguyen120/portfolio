@@ -120,6 +120,7 @@ export default function Home() {
         </div>
       </div>
       {/* ============================================================================================================================================================================== */}
+
       <div
         className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'
         id='projects'
