@@ -17,25 +17,22 @@ export default function NavBar() {
     });
   };
   return (
-    <div className=' grid grid-cols-5 bg-slate-800 text-neutral-300 rounded-b-lg w-1/3 mx-auto  py-3 mb-6'>
-      {/* <Link
-        className=' hover:bg-slate-600 rounded-lg px-2 py-4 text-center'
-        href='#aboutMe'
-        onClick={handleScroll}
-      >
-        About Me
-      </Link> */}
+    <motion.div
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ ease: 'easeOut', duration: 0.7 }}
+      className=' grid grid-cols-4 bg-slate-800 text-neutral-300 rounded-b-lg w-1/3 mx-auto  py-3 mb-6'
+    >
       {[
         ['About Me', '#aboutMe'],
         ['Education', '#education'],
         ['Projects', '#projects'],
         ['Skills', '#skills'],
-        ['Contact Me', '#contact'],
         // ['animationTest', '/animationTest'],
       ].map(([title, url]) => (
         <motion.div
           whileHover={{ scale: 1.6 }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 0.9, rotate: [-20, 20, 0] }}
           transition={{ duration: 0.3 }}
           key={title}
         >
@@ -55,6 +52,6 @@ export default function NavBar() {
       >
         animationTest
       </Link> */}
-    </div>
+    </motion.div>
   );
 }
