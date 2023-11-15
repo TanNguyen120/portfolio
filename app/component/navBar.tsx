@@ -20,7 +20,7 @@ export default function NavBar() {
     <motion.div
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      transition={{ ease: 'easeOut', duration: 0.7 }}
+      transition={{ ease: 'easeOut', duration: 1 }}
       className=' grid grid-cols-4 bg-slate-800 text-neutral-300 rounded-b-lg w-1/3 mx-auto  py-3 mb-6'
     >
       {[
@@ -31,8 +31,8 @@ export default function NavBar() {
         // ['animationTest', '/animationTest'],
       ].map(([title, url]) => (
         <motion.div
-          whileHover={{ scale: 1.6 }}
-          whileTap={{ scale: 0.9, rotate: [-20, 20, 0] }}
+          whileHover={{ scale: 1.5 }}
+          whileTap={{ scale: 0.9, rotate: -20 }}
           transition={{ duration: 0.3 }}
           key={title}
         >

@@ -6,9 +6,11 @@ import Link from 'next/link';
 export default function ProfilePicture() {
   return (
     <motion.div
+      initial={{ scale: 0, rotate: '180deg' }}
+      animate={{ scale: 1, rotate: '0deg' }}
       whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.9, rotate: ['20deg', '-20deg', '0deg'] }}
-      transition={{ duration: 0.5, delay: 0.3 }}
+      whileTap={{ scale: 0.1 }}
+      transition={{ duration: 1 }}
     >
       <div className=' rounded-full w-96 h-96 my-8 mx-auto'>
         <Link href={'#aboutMe'}>

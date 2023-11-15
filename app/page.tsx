@@ -10,6 +10,7 @@ import NavBar from './component/navBar';
 import Image from 'next/image';
 import ScrollProgressBar from './component/scrollProgress';
 import ProfilePicture from './component/profilePicture';
+import DegreePic from './component/degreePic';
 
 export default function Home() {
   const skillList = [
@@ -108,15 +109,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='hover:scale-150 cursor-crosshair'>
-            <Image
-              src={'/btn.jpg'}
-              alt='DegreePic'
-              width={1200}
-              height={1200}
-              className=' rounded-lg -rotate-90 object-cover w-full h-1/2'
-            />
-          </div>
+          <DegreePic />
         </div>
       </div>
       {/* ============================================================================================================================================================================== */}
