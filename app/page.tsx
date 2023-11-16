@@ -11,6 +11,7 @@ import Image from 'next/image';
 import ScrollProgressBar from './component/scrollProgress';
 import ProfilePicture from './component/profilePicture';
 import DegreePic from './component/degreePic';
+import ProjectAlbum from './component/projectAlbum';
 
 export default function Home() {
   const skillList = [
@@ -119,16 +120,7 @@ export default function Home() {
         id='projects'
       >
         <HeadTile tile='Projects' />
-        {projects.projects.map((e: any, i: number) => (
-          <ProjectCard
-            key={i}
-            projectName={e.projectName}
-            description={e.description}
-            projectLink={e.projectLink}
-            imgUrl={e.imgUrl}
-            websiteLink={e.webSiteLink}
-          />
-        ))}
+        <ProjectAlbum />
       </div>
       {/* ============================================================================================================================================================================== */}
       <div
