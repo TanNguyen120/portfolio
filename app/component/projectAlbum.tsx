@@ -1,56 +1,104 @@
 'use client';
 import { useEffect, useState } from 'react';
 import projects from '@/project.json';
-import { motion } from 'framer-motion';
+import { motion, useAnimationControls } from 'framer-motion';
 import ProjectCard from './projectCard';
-import { MdOutlineNavigateNext } from 'react-icons/md';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 export default function ProjectAlbum() {
   const projectsArray = projects.projects;
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeProject, setActiveProject] = useState(projectsArray[0]);
+  const controls = useAnimationControls();
+  const counterControl = useAnimationControls();
 
   // handle changing index to prevent index out of bound
   const handleChangeIndex = (index: number) => {
     if (index >= 0 || index <= projectsArray.length) {
       setActiveIndex(index);
-      return null;
+    }
+    if (index < 0) {
+      setActiveIndex(0);
+    }
+    if (index >= projectsArray.length) {
+      setActiveIndex(projectsArray.length - 1);
     }
     console.log(
-      'current index: ' + index + ' in array lenght: ' + projectsArray.length
+      'current index: ' + index + ' in array length: ' + projectsArray.length
     );
   };
 
   useEffect(() => {
     setActiveProject(projectsArray[activeIndex]);
-  }, [activeIndex, projectsArray]);
+    controls.start({
+      opacity: [0, 1],
+      scale: [0, 1],
+      transition: { duration: 1, ease: 'easeInOut' },
+    });
+
+    counterControl.start({
+      opacity: [0, 1],
+      scale: [0, 1],
+      rotate: [90, 50, 0],
+      transition: { duration: 1, ease: 'easeInOut' },
+    });
+  }, [activeIndex, projectsArray, controls, counterControl]);
   return (
     <div className=' flex flex-col'>
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <ProjectCard
-          imgUrl={activeProject.imgUrl}
-          description={activeProject.description}
-          projectLink={activeProject.projectLink}
-          projectName={activeProject.projectName}
-          websiteLink={activeProject.webSiteLink}
-        />
-      </motion.div>
-      <motion.button
-        whileTap={{
-          scale: 0.7,
-          color: 'rgb(105, 105, 105)',
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-        onClick={(e) => handleChangeIndex(activeIndex + 1)}
-      >
-        <MdOutlineNavigateNext className=' w-20 h-20' />
-      </motion.button>
+      <div className='w-full flex flex-row justify-center text-slate-200 text-xl my-3 '>
+        Project:{' '}
+        <motion.div animate={counterControl}>{activeIndex + 1}</motion.div>/
+        {projectsArray.length}
+      </div>
+      <div className='grid grid-cols-1'>
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={controls}
+          transition={{ duration: 0.5 }}
+        >
+          <ProjectCard
+            imgUrl={activeProject.imgUrl}
+            description={activeProject.description}
+            projectLink={activeProject.projectLink}
+            projectName={activeProject.projectName}
+            websiteLink={activeProject.webSiteLink}
+          />
+        </motion.div>
+      </div>
+      <div className=' flex flex-row mx-auto'>
+        {/* back button */}
+        <motion.button
+          whileTap={{
+            scale: 0.7,
+            color: 'rgb(105, 105, 105)',
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          onClick={(e) => {
+            handleChangeIndex(activeIndex - 1);
+          }}
+          className=' w-20 h-20 text-slate-200 text-6xl mx-3 '
+        >
+          <IoIosArrowBack />
+        </motion.button>
+        {/* next button */}
+        <motion.button
+          whileTap={{
+            scale: 0.7,
+            color: 'rgb(105, 105, 105)',
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          onClick={(e) => {
+            handleChangeIndex(activeIndex + 1);
+          }}
+          className=' w-20 h-20 text-slate-200 text-6xl mx-3 '
+        >
+          <IoIosArrowForward />
+        </motion.button>
+      </div>
     </div>
   );
 }

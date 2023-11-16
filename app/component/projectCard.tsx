@@ -15,7 +15,7 @@ export default function ProjectCard({
   websiteLink: any;
 }) {
   return (
-    <div className=' w-3/5 bg-slate-700 shadow-sm shadow-slate-300 grid grid-cols-3 '>
+    <div className=' bg-slate-700 shadow-sm shadow-slate-300 grid grid-cols-3 '>
       <Image height={920} width={1280} src={imgUrl} alt='project poster' />
       <div className=' col-span-2 flex flex-col items-center m-5'>
         <div className=' text-white text-lg m-4 font-semibold'>
