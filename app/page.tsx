@@ -59,12 +59,12 @@ export default function Home() {
         </div>
       </div>
       <div
-        className=' flex justify-center min-w-full bg-slate-800 p-44 shadow-md shadow-slate-50'
+        className=' flex justify-center min-w-full bg-slate-800 lg:p-44 md:p-10 p-5 shadow-md shadow-slate-50'
         id='aboutMe'
       >
-        <div className='flex flex-row w-1/2 items-center gap-24'>
+        <div className='flex lg:flex-row flex-col lg:w-1/2 items-center lg:gap-24 gap-10'>
           <HeadTile tile='About Me' />
-          <div className='text-white text-left w-1/2 ml-5 mr-auto'>
+          <div className='text-white text-left lg:w-1/2 ml-5 mr-auto'>
             With Bachelor Degree in Information Technology, I have intermediate
             knowledge in math for computer (Discrete Mathematics, Number Theory,
             Graph Theory). Strong knowledge in DataStructure and Algorithm,
@@ -73,14 +73,14 @@ export default function Home() {
         </div>
       </div>
       {/* ============================================================================================================================================================================== */}
-      <div className='  min-w-full bg-slate-700 p-24 shadow-md shadow-slate-400 flex items-center justify-center'>
+      <div className='  min-w-full bg-slate-700 lg:p-24 md:p-10 pt-10 p-2 shadow-md shadow-slate-400 flex items-center justify-center'>
         <div
-          className='flex flex-col w-1/2 gap-24 justify-center items-center '
+          className='flex flex-col lg:w-1/2 lg:gap-24 gap-5 md:gap-10 justify-center items-center '
           id='education'
         >
           <HeadTile tile='Education' />
-          <div className=' flex flex-col border border-slate-500 p-10 '>
-            <div className=' flex flex-row '>
+          <div className=' flex flex-col border w-full md:w-fit border-slate-500 lg:p-10 md:p-5  p-2  '>
+            <div className=' flex flex-row  '>
               <div className=' flex flex-col'>
                 <div className=' text-slate-200 text-xl'>
                   VNUHCM University of Science{' '}
@@ -116,7 +116,7 @@ export default function Home() {
       {/* ============================================================================================================================================================================== */}
 
       <div
-        className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 p-24 shadow-md shadow-slate-50'
+        className='flex flex-col items-center gap-14 justify-center min-w-full bg-slate-800 lg:p-24 md:p-5 p-2 shadow-md shadow-slate-50'
         id='projects'
       >
         <HeadTile tile='Projects' />
