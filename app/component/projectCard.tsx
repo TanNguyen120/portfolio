@@ -33,7 +33,7 @@ export default function ProjectCard({
         <Link
           target='_blank'
           href={projectLink}
-          className=' text-slate-300 hover:text-slate-500 hover:underline mt-auto'
+          className=' text-slate-300 hover:text-slate-500 hover:underline mt-auto text-center'
         >
           To Project
         </Link>
@@ -41,7 +41,9 @@ export default function ProjectCard({
         <Link
           href={websiteLink ? websiteLink : ''}
           className={
-            websiteLink ? ' text-slate-300 hover:underline mt-2' : 'hidden'
+            websiteLink
+              ? ' text-slate-300 hover:underline mt-2 text-center'
+              : 'hidden'
           }
           title={websiteLink}
           target='blank'
