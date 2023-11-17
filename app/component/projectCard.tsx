@@ -15,13 +15,21 @@ export default function ProjectCard({
   websiteLink: any;
 }) {
   return (
-    <div className=' bg-slate-700 shadow-sm shadow-slate-300 grid grid-cols-3 '>
-      <Image height={920} width={1280} src={imgUrl} alt='project poster' />
-      <div className=' col-span-2 flex flex-col items-center m-5'>
+    <div className=' bg-slate-700 shadow-sm shadow-slate-300 grid grid-cols-1 border border-slate-200 p-1 w-8/12 mx-auto '>
+      <Image
+        height={420}
+        width={780}
+        src={imgUrl}
+        alt='project poster'
+        object-fit='scale-down'
+        className=' object-scale-down mx-auto mt-2'
+      />
+
+      <div className='flex flex-col items-center m-5'>
         <div className=' text-white text-lg m-4 font-semibold'>
           {projectName}
         </div>
-        <div className=' text-slate-400 m-5'>{description}</div>
+        <div className=' text-slate-400 mx-auto  w-3/4'>{description}</div>
         <Link
           target='_blank'
           href={projectLink}

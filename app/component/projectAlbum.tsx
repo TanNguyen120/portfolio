@@ -18,14 +18,11 @@ export default function ProjectAlbum() {
       setActiveIndex(index);
     }
     if (index < 0) {
-      setActiveIndex(0);
-    }
-    if (index >= projectsArray.length) {
       setActiveIndex(projectsArray.length - 1);
     }
-    console.log(
-      'current index: ' + index + ' in array length: ' + projectsArray.length
-    );
+    if (index >= projectsArray.length) {
+      setActiveIndex(0);
+    }
   };
 
   useEffect(() => {
@@ -50,12 +47,8 @@ export default function ProjectAlbum() {
         <motion.div animate={counterControl}>{activeIndex + 1}</motion.div>/
         {projectsArray.length}
       </div>
-      <div className='grid grid-cols-1'>
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={controls}
-          transition={{ duration: 0.5 }}
-        >
+      <div className='grid grid-cols-1 mx-auto'>
+        <motion.div animate={controls} transition={{ duration: 0.5 }}>
           <ProjectCard
             imgUrl={activeProject.imgUrl}
             description={activeProject.description}

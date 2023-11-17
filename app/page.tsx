@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <main className='flex min-h-screen flex-col items-center justify-between  bg-slate-200'>
       <div className=' grid grid-cols-1 bg-violetSpace bg-cover w-screen '>
-        <div className=' min-h-screen flex flex-col px-12 items-center bg-slate-800 bg-opacity-75'>
+        <div className=' min-h-screen flex flex-col md:px-12 px-3 items-center bg-slate-800 bg-opacity-75'>
           <ScrollProgressBar />
           <NavBar />
           <div className=' text-white font-semibold text-6xl '>
