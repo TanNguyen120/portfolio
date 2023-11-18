@@ -12,49 +12,18 @@ import ScrollProgressBar from './component/scrollProgress';
 import ProfilePicture from './component/profilePicture';
 import DegreePic from './component/degreePic';
 import ProjectAlbum from './component/projectAlbum';
+import NameAndTile from './component/nameAndTile';
+import AboutMe from './component/aboutMe';
+import UniversityAbout from './component/univercityAbout';
 
 export default function Home() {
-  const skillList = [
-    'javaScript',
-    'c++',
-    'c#',
-    'python',
-    'php',
-    'java',
-    'react',
-    'unity',
-    'phaser',
-    'nextjs',
-    'nestjs',
-    'node',
-    'react-native',
-    'expressjs',
-    'tailwind',
-    'jquery',
-    'sqlSever',
-    'Database Design',
-    'mySql',
-    'MongoDB',
-    'numpy',
-    'Tablelau',
-    'Git',
-    'GitHub',
-    'Phaser 3',
-    'Post Man',
-    'Ajax',
-  ];
   return (
     <main className='flex min-h-screen flex-col items-center justify-between  bg-slate-200'>
       <div className=' grid grid-cols-1 bg-violetSpace bg-cover w-screen '>
         <div className=' min-h-screen flex flex-col md:px-12 px-3 items-center bg-slate-800 bg-opacity-75'>
           <ScrollProgressBar />
           <NavBar />
-          <div className=' text-white font-semibold text-6xl '>
-            Nguyễn Việt Tân
-          </div>
-          <div className=' text-slate-300 font-semibold text-4xl mt-10  '>
-            Software Engineer
-          </div>
+          <NameAndTile />
           <ProfilePicture />
         </div>
       </div>
@@ -64,12 +33,7 @@ export default function Home() {
       >
         <div className='flex lg:flex-row flex-col lg:w-1/2 items-center lg:gap-24 gap-10'>
           <HeadTile tile='About Me' />
-          <div className='text-white text-left lg:w-1/2 ml-5 mr-auto'>
-            With Bachelor Degree in Information Technology, I have intermediate
-            knowledge in math for computer (Discrete Mathematics, Number Theory,
-            Graph Theory). Strong knowledge in DataStructure and Algorithm,
-            Devops, Dynamic Programming.
-          </div>
+          <AboutMe />
         </div>
       </div>
       {/* ============================================================================================================================================================================== */}
@@ -80,35 +44,7 @@ export default function Home() {
         >
           <HeadTile tile='Education' />
           <div className=' flex flex-col border w-full md:w-fit border-slate-500 lg:p-10 md:p-5  p-2  '>
-            <div className=' flex flex-row  '>
-              <div className=' flex flex-col'>
-                <div className=' text-slate-200 text-xl'>
-                  VNUHCM University of Science{' '}
-                </div>
-                <div className=' text-slate-400'>
-                  Bachelor of Science in Information Technology
-                </div>
-              </div>
-              <div className=' text-slate-200 float-right ml-auto'>
-                Sept 2016 - Sept 2022
-              </div>
-            </div>
-            <div className='flex flex-col'>
-              <div className=' text-white'>
-                VNUHCM-US was re-founded in March 1996 following a split from
-                Đại học Tổng hợp (lit. translation: Ho Chi Minh City
-                University). The school has since been a member university of
-                Vietnam National University, Ho Chi Minh City.
-              </div>
-              <div className=' mt-5 text-white'>
-                The two joint bachelor programs include Bachelor of Computer &
-                Information Sciences with a major in IT Service Science
-                collaborated with Auckland University of Technology, New
-                Zealand; Bachelor of Science in Management collaborated with a
-                major in International Business collaborated with Keuka College,
-                USA[1]
-              </div>
-            </div>
+            <UniversityAbout />
           </div>
           <DegreePic />
         </div>
@@ -128,11 +64,7 @@ export default function Home() {
         id='skills'
       >
         <HeadTile tile='Skills' />
-        <div className=' flex flex-row py-5 gap-4 m-auto items-center w-1/2 flex-wrap'>
-          {skillList.map((e, i) => (
-            <SkillBtn key={i} skillName={e} />
-          ))}
-        </div>
+        <SkillBtn />
       </div>
       {/* ============================================================================================================================================================================== */}
       <div

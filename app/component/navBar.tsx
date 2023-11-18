@@ -27,7 +27,7 @@ export default function NavBar() {
     });
   };
   return (
-    <AnimatePresence>
+    <>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
@@ -41,18 +41,16 @@ export default function NavBar() {
           ['Education', '#education'],
           ['Projects', '#projects'],
           ['Skills', '#skills'],
-          // ['animationTest', '/animationTest'],
         ].map(([title, url]) => (
           <motion.div
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9, rotate: -20 }}
             transition={{ duration: 0.3 }}
-            key={title}
+            key={title + 'desktop'}
           >
             <motion.a
               href={url}
               className=' rounded-lg px-2 py-6 text-center hover:text-white font-bold text-lg'
-              key={title}
               onClick={handleScroll}
             >
               {title}
@@ -60,6 +58,7 @@ export default function NavBar() {
           </motion.div>
         ))}
       </motion.div>
+      {/* Mobile Version */}
       <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
         <motion.button
           whileTap={{ scale: 0.97 }}
@@ -99,6 +98,7 @@ export default function NavBar() {
               },
             },
           }}
+          key={'mobile nav'}
           style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
           className=' text-white rounded-lg bg-slate-800 w-min px-2 md:hidden'
         >
@@ -107,23 +107,21 @@ export default function NavBar() {
             ['Education', '#education'],
             ['Projects', '#projects'],
             ['Skills', '#skills'],
-            // ['animationTest', '/animationTest'],
           ].map(([title, url]) => (
-            <motion.li key={title} variants={itemVariants}>
+            <motion.li key={title + ' mobile '} variants={itemVariants}>
               <motion.a
                 whileHover={{ scale: 1.2 }}
                 transition={{ duration: 0.3 }}
                 href={url}
                 className=' rounded-lg px-2 py-6 text-center hover:text-white font-bold text-lg'
-                key={title}
                 onClick={handleScroll}
               >
                 {title}
-              </motion.a>{' '}
+              </motion.a>
             </motion.li>
           ))}
         </motion.ul>
       </motion.nav>
-    </AnimatePresence>
+    </>
   );
 }
