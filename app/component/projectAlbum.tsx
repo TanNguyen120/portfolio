@@ -47,7 +47,7 @@ export default function ProjectAlbum() {
         <motion.div animate={counterControl}>{activeIndex + 1}</motion.div>/
         {projectsArray.length}
       </div>
-      <div className='grid grid-cols-1 mx-auto'>
+      <div className=''>
         <motion.div animate={controls} transition={{ duration: 0.5 }}>
           <ProjectCard
             imgUrl={activeProject.imgUrl}

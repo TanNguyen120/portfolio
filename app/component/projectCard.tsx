@@ -15,25 +15,25 @@ export default function ProjectCard({
   websiteLink: any;
 }) {
   return (
-    <div className=' bg-slate-700 shadow-sm shadow-slate-300 grid grid-cols-1 border border-slate-200 p-1 w-8/12 mx-auto '>
+    <div className=' bg-slate-700 shadow-sm shadow-slate-300 grid grid-cols-2 border border-slate-200 p-1 lg:w-8/12 lg:mx-auto md:mx-10 mx-1  '>
       <Image
-        height={420}
-        width={780}
+        height={1420}
+        width={1780}
         src={imgUrl}
         alt='project poster'
         object-fit='scale-down'
-        className=' object-scale-down mx-auto mt-2'
+        className='w-96 h-96 object-cover'
       />
 
-      <div className='flex flex-col items-center m-5'>
-        <div className=' text-white text-lg m-4 font-semibold'>
+      <div className='grid grid-col-1 justify-start p-2'>
+        <div className=' text-white text-lg m-4 font-semibold text-center'>
           {projectName}
         </div>
-        <div className=' text-slate-400 mx-auto  w-3/4'>{description}</div>
+        <div className=' text-slate-400 '>{description}</div>
         <Link
           target='_blank'
           href={projectLink}
-          className=' text-slate-300 hover:text-slate-500 hover:underline mt-auto'
+          className=' text-slate-300 hover:text-slate-500 hover:underline mt-auto text-center'
         >
           To Project
         </Link>
@@ -41,7 +41,9 @@ export default function ProjectCard({
         <Link
           href={websiteLink ? websiteLink : ''}
           className={
-            websiteLink ? ' text-slate-300 hover:underline mt-2' : 'hidden'
+            websiteLink
+              ? ' text-slate-300 hover:underline mt-2 text-center'
+              : 'hidden'
           }
           title={websiteLink}
           target='blank'

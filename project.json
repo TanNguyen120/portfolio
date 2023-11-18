@@ -2,7 +2,7 @@
   "projects": [
     {
       "projectName": "T-pokedex",
-      "description": "Complex Website that have all pokemon game relate data. Write with react framework and styling with Tailswind Css. Lot of advance library was use like react router and redux",
+      "description": "Complex Website that have all pokemon game relate data. \nWrite with react framework and styling with Tailswind Css. \nLot of advance library was use like react router \nand redux",
       "projectLink": "https://github.com/TanNguyen120/t-pokedex",
       "imgUrl": "/projectsPic/t-pokedex/t-pokedex.png",
       "webSiteLink": "https://tannguyen120.github.io/t-pokedex/"
@@ -24,7 +24,7 @@
       "projectName": "Backend E commerce Website",
       "description": "The back end of an toy store. Use NodeJS with express framework and use mysql for database. This project has some advance library for use like passport for token base auth, cookie reader for auto login, and file(img) uploading",
       "projectLink": "https://github.com/TanNguyen120/BeamSaber-Store",
-      "imgUrl": "/projectsPic/beamSaber.png"
+      "imgUrl": "/projectsPic/beamSaber/beamSaber.png"
     },
     {
       "projectName": "Lich Cat Dien",
