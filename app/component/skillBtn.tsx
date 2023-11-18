@@ -53,7 +53,7 @@ export default function SkillBtn() {
 
   return (
     <div
-      className=' flex flex-row py-5 gap-4 m-auto items-center w-1/2 flex-wrap'
+      className=' flex flex-row py-5 gap-4 m-auto items-center lg:w-1/2 md:w-3/4 w-full  flex-wrap'
       ref={ref}
     >
       {skillList.map((e, i) => (

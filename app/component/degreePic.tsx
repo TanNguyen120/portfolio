@@ -1,17 +1,35 @@
 'use client';
 import Link from 'next/link';
-import { Variants, motion } from 'framer-motion';
+import { Variants, motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+
+const picAnimate = {
+  initial: { scale: 0 },
+  show: {
+    scale: 1,
+    transition: {
+      duration: 3,
+      type: 'spring',
+    },
+  },
+};
 
 const DegreePic = () => {
   const [isOpen, setIsOpen] = useState(false);
+  // reference to the div below
+  const ref = useRef(null);
+  // a listener fof when the div have ref is in view
+  const isInView = useInView(ref);
   return (
     <motion.div
+      ref={ref}
       onClick={(e) => setIsOpen((preState) => !preState)}
       className=' cursor-crosshair'
       whileHover={{ scale: [null, 1.5, 1.4] }}
       transition={{ duration: 0.3 }}
+      variants={picAnimate}
+      animate={isInView ? 'show' : 'initial'}
     >
       {/* Using state to determine which version of the image is render */}
       {isOpen && (

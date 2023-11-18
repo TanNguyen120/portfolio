@@ -1,12 +1,33 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import projects from '@/project.json';
-import { motion, useAnimationControls } from 'framer-motion';
+import { motion, useAnimationControls, useInView } from 'framer-motion';
 import ProjectCard from './projectCard';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
+// variant object
+const projectAnimate = {
+  initial: { alpha: 0, y: -100 },
+  show: {
+    alpha: 1,
+    y: 0,
+    transition: {
+      duration: 2.5,
+      type: 'spring',
+      delay: 1,
+    },
+  },
+};
+
 export default function ProjectAlbum() {
   const projectsArray = projects.projects;
+
+  // reference to the div we want to animate while in view
+  const ref = useRef(null);
+  // a listener fof when the div have ref is in view
+  const isInView = useInView(ref);
+
+  /** State use for control projects slider */
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeProject, setActiveProject] = useState(projectsArray[0]);
   const controls = useAnimationControls();
@@ -41,13 +62,17 @@ export default function ProjectAlbum() {
     });
   }, [activeIndex, projectsArray, controls, counterControl]);
   return (
-    <div className=' flex flex-col'>
+    <div className=' flex flex-col' ref={ref}>
       <div className='w-full flex flex-row justify-center text-slate-200 text-xl my-3 '>
         Project:{' '}
         <motion.div animate={counterControl}>{activeIndex + 1}</motion.div>/
         {projectsArray.length}
       </div>
-      <div className=''>
+      <motion.div
+        className=''
+        variants={projectAnimate}
+        animate={isInView ? 'show' : 'initial'}
+      >
         <motion.div animate={controls} transition={{ duration: 0.5 }}>
           <ProjectCard
             imgUrl={activeProject.imgUrl}
@@ -57,7 +82,7 @@ export default function ProjectAlbum() {
             websiteLink={activeProject.webSiteLink}
           />
         </motion.div>
-      </div>
+      </motion.div>
       <div className=' flex flex-row mx-auto'>
         {/* back button */}
         <motion.button
