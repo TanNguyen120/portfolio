@@ -5,38 +5,65 @@
       "description": "Complex Website that have all pokemon game relate data. \nWrite with react framework and styling with Tailswind Css. \nLot of advance library was use like react router \nand redux",
       "projectLink": "https://github.com/TanNguyen120/t-pokedex",
       "imgUrl": "/projectsPic/t-pokedex/t-pokedex.png",
-      "webSiteLink": "https://tannguyen120.github.io/t-pokedex/"
+      "webSiteLink": "https://tannguyen120.github.io/t-pokedex/",
+      "skill": [
+        "react",
+        "redux",
+        "tailswind",
+        "poke-api",
+        "axios",
+        "javascript"
+      ]
     },
     {
       "projectName": "T-Gamelog",
       "description": "Website to logging my played games. Using postgrest db from vercel to store data",
       "projectLink": "https://github.com/TanNguyen120/Gamer-Log",
       "imgUrl": "/projectsPic/t-gameLog.png",
-      "webSiteLink": "https://t-gamelog.vercel.app/"
+      "webSiteLink": "https://t-gamelog.vercel.app/",
+      "skill": [
+        "react",
+        "nextJS",
+        "rawgIO",
+        "headlessJS",
+        "postgrest",
+        "tailswind"
+      ]
     },
     {
       "projectName": "Endless Tower",
       "description": "A rougelike game written in C# language. Develope with unity engine",
       "projectLink": "https://github.com/TanNguyen120/unity-rougelike-game",
-      "imgUrl": "/projectsPic/endlessTower.png"
+      "imgUrl": "/projectsPic/endlessTower.png",
+      "skill": ["C#", "unity", "rougeLite", "pixel-art"]
     },
     {
       "projectName": "Backend E commerce Website",
       "description": "The back end of an toy store. Use NodeJS with express framework and use mysql for database. This project has some advance library for use like passport for token base auth, cookie reader for auto login, and file(img) uploading",
       "projectLink": "https://github.com/TanNguyen120/BeamSaber-Store",
-      "imgUrl": "/projectsPic/beamSaber/beamSaber.png"
+      "imgUrl": "/projectsPic/beamSaber/beamSaber.png",
+      "skill": [
+        "bootstrap",
+        "javascript",
+        "JQuery",
+        "expressJS",
+        "mysql",
+        "sequelize"
+      ]
     },
     {
       "projectName": "Lich Cat Dien",
       "description": "React native project that crawl data from a website and display nicely in phone screen plus a notification if your region get electric shutdown",
       "projectLink": "https://github.com/TanNguyen120/lich-cat-dien",
-      "imgUrl": "/projectsPic/lcd.jpg"
+      "imgUrl": "/projectsPic/lcd.jpg",
+      "skill": ["react-native", "expo", "async-storage", "web-crawler"]
     },
     {
       "projectName": "PHP web sever",
       "description": "A web sever write in PHP and connect to mysql data base via native library",
       "projectLink": "https://github.com/UDPT-MARKET",
-      "imgUrl": "/projectsPic/stock-project.jpg"
+      "imgUrl": "/projectsPic/stock-project.jpg",
+      "skill": ["php", "mvc", "bootstrap", "css", "mysql"]
     }
   ]
 }

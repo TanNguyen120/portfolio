@@ -107,6 +107,7 @@ export default function ProjectAlbum() {
             projectLink={activeProject.projectLink}
             projectName={activeProject.projectName}
             websiteLink={activeProject.webSiteLink}
+            skills={activeProject.skill}
           />
         </motion.div>
       </motion.div>

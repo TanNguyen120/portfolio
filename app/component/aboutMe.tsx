@@ -31,9 +31,14 @@ export default function AboutMe() {
           ref={ref}
           variants={aboutAnimated}
           initial='initial'
+          whileHover={{
+            scale: 0.6,
+            color: '#869dba',
+          }}
           animate={isInView ? 'show' : 'initial'}
           custom={Math.random()}
           key={i}
+          className='hover:cursor-pointer'
         >
           {e}
         </motion.div>

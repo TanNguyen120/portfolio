@@ -74,6 +74,7 @@ export default function UniversityAbout() {
         <div className=' text-white text-left flex flex-row gap-2 flex-wrap'>
           {paragraph1?.map((e, i) => (
             <motion.div
+              className=' hover:cursor-pointer opacity-50'
               variants={uniAnimated}
               initial='initial'
               animate={isInView ? 'animate' : 'initial'}
