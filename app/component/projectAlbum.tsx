@@ -7,14 +7,29 @@ import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 // variant object
 const projectAnimate = {
-  initial: { alpha: 0, y: -100 },
+  initial: { opacity: 0, y: -300 },
   show: {
-    alpha: 1,
+    opacity: 1,
     y: 0,
     transition: {
       duration: 2.5,
       type: 'spring',
       delay: 1,
+      bounce: 0.7,
+    },
+  },
+};
+
+const arrowAnimate = {
+  hidden: { opacity: 0, x: -300 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1.5,
+      type: 'spring',
+      delay: 1,
+      bounce: 0.4,
     },
   },
 };
@@ -51,23 +66,35 @@ export default function ProjectAlbum() {
     controls.start({
       opacity: [0, 1],
       scale: [0, 1],
-      transition: { duration: 1, ease: 'easeInOut' },
+      transition: {
+        duration: 2,
+        ease: 'easeInOut',
+        type: 'spring',
+        bounce: 0.5,
+      },
     });
 
     counterControl.start({
       opacity: [0, 1],
       scale: [0, 1],
       rotate: [90, 50, 0],
-      transition: { duration: 1, ease: 'easeInOut' },
+      transition: {
+        duration: 1,
+        ease: 'easeInOut',
+      },
     });
   }, [activeIndex, projectsArray, controls, counterControl]);
   return (
     <div className=' flex flex-col' ref={ref}>
-      <div className='w-full flex flex-row justify-center text-slate-200 text-xl my-3 '>
+      <motion.div
+        variants={arrowAnimate}
+        animate={isInView ? 'show' : 'hidden'}
+        className='w-full flex flex-row justify-center text-slate-200 text-xl mt-3 mb-7 '
+      >
         Project:{' '}
         <motion.div animate={counterControl}>{activeIndex + 1}</motion.div>/
         {projectsArray.length}
-      </div>
+      </motion.div>
       <motion.div
         className=''
         variants={projectAnimate}
@@ -83,7 +110,11 @@ export default function ProjectAlbum() {
           />
         </motion.div>
       </motion.div>
-      <div className=' flex flex-row mx-auto'>
+      <motion.div
+        className=' flex flex-row mx-auto  my-4'
+        variants={arrowAnimate}
+        animate={isInView ? 'show' : 'hidden'}
+      >
         {/* back button */}
         <motion.button
           whileTap={{
@@ -112,11 +143,11 @@ export default function ProjectAlbum() {
           onClick={(e) => {
             handleChangeIndex(activeIndex + 1);
           }}
-          className=' w-20 h-20 text-slate-200 text-6xl mx-3 '
+          className=' w-20 h-20 text-slate-200 text-6xl mx-3'
         >
           <IoIosArrowForward />
         </motion.button>
-      </div>
+      </motion.div>
     </div>
   );
 }

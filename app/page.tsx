@@ -2,9 +2,7 @@ import HeadTile from '@/app/component/headTile';
 import ProjectCard from '@/app/component/projectCard';
 import SkillBtn from '@/app/component/skillBtn';
 import Link from 'next/link';
-import { MdOutlineAlternateEmail } from 'react-icons/md';
-import { AiFillLinkedin } from 'react-icons/ai';
-import { BsGithub } from 'react-icons/bs';
+
 import projects from '@/project.json';
 import NavBar from './component/navBar';
 import Image from 'next/image';
@@ -15,6 +13,7 @@ import ProjectAlbum from './component/projectAlbum';
 import NameAndTile from './component/nameAndTile';
 import AboutMe from './component/aboutMe';
 import UniversityAbout from './component/univercityAbout';
+import ContactMe from './component/contactMe';
 
 export default function Home() {
   return (
@@ -72,38 +71,7 @@ export default function Home() {
         id='contact'
       >
         <HeadTile tile='Contact Me' />
-        <div className=' flex flex-col w-1/2 mx-auto my-3 pl-12 gap-5'>
-          <div className=' flex flex-row text-white text-lg'>
-            <div className=' mr-4 text-slate-300'>
-              Email <MdOutlineAlternateEmail className='inline' />:
-            </div>
-            <div>tannguyen1220@gmail.com</div>
-          </div>
-          <div className=' flex flex-row text-white text-lg'>
-            <div className=' mr-4 text-slate-300'>
-              GitHub <BsGithub className='inline' /> :
-            </div>
-            <Link
-              className='hover:text-blue-300'
-              href={'https://github.com/TanNguyen120/'}
-            >
-              https://github.com/TanNguyen120/
-            </Link>
-          </div>
-          <div className=' flex flex-row text-white text-lg '>
-            <div className=' mr-4 text-slate-300'>
-              Linkdein <AiFillLinkedin className='inline' />:
-            </div>
-            <Link
-              className=' hover:text-blue-300'
-              href={
-                ' https://www.linkedin.com/in/t%C3%A2n-nguy%E1%BB%85n-vi%E1%BB%87t-89852b266/'
-              }
-            >
-              https://www.linkedin.com/Tan Nguyen
-            </Link>
-          </div>
-        </div>
+        <ContactMe />
       </div>
       {/* ============================================================================================================================================================================== */}
       <div className='flex flex-col min-w-full bg-black text-slate-200 p-24 shadow-md shadow-slate-400  items-center'>

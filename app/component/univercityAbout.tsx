@@ -13,6 +13,12 @@ const uniAnimated = {
     scale: 1,
     transition: { duration: 0.5, ease: 'easeInOut', delay: i * 0.1 },
   }),
+  // later animate will be animate after the first paragraph
+  laterAnimate: (i: number) => ({
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5, ease: 'easeInOut', delay: i * 0.1 + 3 },
+  }),
 };
 
 const genericAnimated = {
@@ -83,7 +89,7 @@ export default function UniversityAbout() {
             <motion.div
               variants={uniAnimated}
               initial='initial'
-              animate={isInView ? 'animate' : 'initial'}
+              animate={isInView ? 'laterAnimate' : 'initial'}
               custom={i}
               key={i}
             >
