@@ -60,7 +60,11 @@ export default function SkillBtn() {
         <motion.div
           className=' px-4 py-2 bg-slate-400 text-white mx-auto'
           variants={btnAnimate}
-          initial='initial'
+          initial={{ rotate: 0 }}
+          whileHover={{
+            scale: 1.3,
+            rotate: [15, -15, 0],
+          }}
           animate={isInView ? 'show' : 'initial'}
           custom={i}
           key={i}
