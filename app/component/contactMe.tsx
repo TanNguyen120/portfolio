@@ -4,6 +4,8 @@ import React, { useRef, useState } from 'react';
 import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
+import { SiUpwork } from 'react-icons/si';
+
 import Link from 'next/link';
 
 const contactAnimate = {
@@ -68,6 +70,24 @@ export default function ContactMe() {
           }
         >
           https://www.linkedin.com/Tan Nguyen
+        </Link>
+      </motion.div>
+      <motion.div
+        variants={contactAnimate}
+        animate={isInView ? 'show' : 'hidden'}
+        custom={5}
+        className=' flex flex-row text-white text-lg '
+      >
+        <div className=' mr-4 text-slate-300'>
+          Upwork <SiUpwork className='inline' />:
+        </div>
+        <Link
+          className=' hover:text-blue-300'
+          href={
+            ' https://www.linkedin.com/in/t%C3%A2n-nguy%E1%BB%85n-vi%E1%BB%87t-89852b266/'
+          }
+        >
+          n/a
         </Link>
       </motion.div>
     </div>
