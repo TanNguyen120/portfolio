@@ -1,13 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 # My web portfolio
 
-A spa web app that have my contact info and breif projects description. Heavyly inspire by other similar portfilio projects on github
+A spa web app that have some  and breif projects description. Heavyly inspire by other similar portfilio projects on github
 
+📢 📢 Is is hosted on [vercel](https://tannguyenportfolio.vercel.app/).
 
-### Prerequisites
-
-Nodejs 13.0
-```
 ## Getting Started
 
 First, run the development server:
@@ -22,10 +18,18 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+👉 ReacJS, NextJS
+
+
+👉 Frammer Motion
+
+  
+👉 Tailwind Css
+
+  
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
