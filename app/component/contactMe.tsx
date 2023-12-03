@@ -5,6 +5,7 @@ import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { SiUpwork } from 'react-icons/si';
 import { BsGithub } from 'react-icons/bs';
+
 import Link from 'next/link';
 
 const contactAnimate = {
@@ -78,7 +79,7 @@ export default function ContactMe() {
         className=' flex flex-row text-white text-lg '
       >
         <div className=' mr-4 text-slate-300'>
-          Upwork <SiUpwork className='inline' /> :
+          Upwork <SiUpwork className='inline' />:
         </div>
         <Link
           className=' hover:text-blue-300'

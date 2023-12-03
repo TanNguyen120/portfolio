@@ -85,6 +85,7 @@ export default function ProjectCard({
               variants={projectCardAnimated}
               animate={btnControl}
               custom={i}
+              initial={{ rotate: 0 }}
               whileHover={{
                 scale: 1.3,
                 rotate: [15, -15, 0],

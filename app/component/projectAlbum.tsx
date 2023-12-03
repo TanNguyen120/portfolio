@@ -61,9 +61,9 @@ export default function ProjectAlbum() {
     }
   };
 
-  useEffect(() => {
-    setActiveProject(projectsArray[activeIndex]);
-    controls.start({
+  const albumAnimate = {
+    initial: { scale: 0, rotate: '180deg' },
+    isCurrentProject: {
       opacity: [0, 1],
       scale: [0, 1],
       transition: {
@@ -72,9 +72,8 @@ export default function ProjectAlbum() {
         type: 'spring',
         bounce: 0.5,
       },
-    });
-
-    counterControl.start({
+    },
+    numberChange: {
       opacity: [0, 1],
       scale: [0, 1],
       rotate: [90, 50, 0],
@@ -82,7 +81,14 @@ export default function ProjectAlbum() {
         duration: 1,
         ease: 'easeInOut',
       },
-    });
+    },
+  };
+
+  useEffect(() => {
+    setActiveProject(projectsArray[activeIndex]);
+    controls.start('isCurrentProject');
+
+    counterControl.start('numberChange');
   }, [activeIndex, projectsArray, controls, counterControl]);
   return (
     <div className=' flex flex-col' ref={ref}>
@@ -100,7 +106,11 @@ export default function ProjectAlbum() {
         variants={projectAnimate}
         animate={isInView ? 'show' : 'initial'}
       >
-        <motion.div animate={controls} transition={{ duration: 0.5 }}>
+        <motion.div
+          variants={albumAnimate}
+          animate={controls}
+          transition={{ duration: 0.5 }}
+        >
           <ProjectCard
             imgUrl={activeProject.imgUrl}
             description={activeProject.description}
