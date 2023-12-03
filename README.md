@@ -2,7 +2,7 @@
 
 A spa web app that have some  and breif projects description. Heavyly inspire by other similar portfilio projects on github
 
-📢 📢 Is is hosted on [vercel](https://tannguyenportfolio.vercel.app/).
+📢 📢 project is hosted on [vercel](https://tannguyenportfolio.vercel.app/).
 
 ## Getting Started
 
