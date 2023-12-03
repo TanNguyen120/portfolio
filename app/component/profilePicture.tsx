@@ -30,7 +30,7 @@ export default function ProfilePicture() {
       <div className=' rounded-full w-96 h-96 my-8 mx-auto'>
         <Link href={'#aboutMe'}>
           <Image
-            src={'/portrait.png'}
+            src={'/portrait-new.png'}
             alt='avatar'
             width={600}
             height={600}

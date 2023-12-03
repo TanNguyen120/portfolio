@@ -89,7 +89,7 @@ export default function ProjectAlbum() {
       <motion.div
         variants={arrowAnimate}
         animate={isInView ? 'show' : 'hidden'}
-        className='w-full flex flex-row justify-center text-slate-200 text-xl mt-3 mb-7 '
+        className='w-full flex flex-row justify-start text-slate-200 text-xl mt-3 mb-7 ml-2 lg:ml-80 '
       >
         Project:{' '}
         <motion.div animate={counterControl}>{activeIndex + 1}</motion.div>/

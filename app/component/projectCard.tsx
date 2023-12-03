@@ -66,7 +66,7 @@ export default function ProjectCard({
         <motion.div
           variants={projectCardAnimated}
           animate={projectTileControls}
-          className=' text-white text-lg m-4 font-semibold text-center'
+          className=' text-white text-lg m-4 font-semibold text-left pl-1'
         >
           {projectName}
         </motion.div>

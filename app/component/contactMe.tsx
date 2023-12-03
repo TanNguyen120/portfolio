@@ -3,6 +3,7 @@ import { Variants, motion, useInView } from 'framer-motion';
 import React, { useRef, useState } from 'react';
 import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { AiFillLinkedin } from 'react-icons/ai';
+import { SiUpwork } from 'react-icons/si';
 import { BsGithub } from 'react-icons/bs';
 import Link from 'next/link';
 
@@ -68,6 +69,24 @@ export default function ContactMe() {
           }
         >
           https://www.linkedin.com/Tan Nguyen
+        </Link>
+      </motion.div>
+      <motion.div
+        variants={contactAnimate}
+        animate={isInView ? 'show' : 'hidden'}
+        custom={5}
+        className=' flex flex-row text-white text-lg '
+      >
+        <div className=' mr-4 text-slate-300'>
+          Upwork <SiUpwork className='inline' /> :
+        </div>
+        <Link
+          className=' hover:text-blue-300'
+          href={
+            'https://www.upwork.com/freelancers/~0143fca5fc9d266077?viewMode=1'
+          }
+        >
+          https://www.upwork.com/freelancers/~0143fca5fc9d266077
         </Link>
       </motion.div>
     </div>
