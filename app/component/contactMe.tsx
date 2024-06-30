@@ -30,17 +30,6 @@ export default function ContactMe() {
       <motion.div
         variants={contactAnimate}
         animate={isInView ? 'show' : 'hidden'}
-        custom={0}
-        className=' flex flex-row text-white text-lg'
-      >
-        <div className=' mr-4 text-slate-300'>
-          Email <MdOutlineAlternateEmail className='inline' />:
-        </div>
-        <div>tannguyen1220@gmail.com</div>
-      </motion.div>
-      <motion.div
-        variants={contactAnimate}
-        animate={isInView ? 'show' : 'hidden'}
         custom={2}
         className=' flex flex-row text-white text-lg'
       >

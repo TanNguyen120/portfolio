@@ -16,6 +16,14 @@
       ]
     },
     {
+      "projectName": "Healthy Life Style",
+      "description": "An Education game that teach young kid about bad and good life habit. Work on Upwork I help create scene and logic from playbook design into Phaser",
+      "projectLink": "",
+      "imgUrl": "/projectsPic/t-gameLog.png",
+      "webSiteLink": "",
+      "skill": ["Phaser 3", "javascript"]
+    },
+    {
       "projectName": "T-Gamelog",
       "description": "Website to logging my played games. Using postgrest db from vercel to store data",
       "projectLink": "https://github.com/TanNguyen120/Gamer-Log",
